@@ -1,0 +1,32 @@
+﻿[
+  {
+    "id": 1,
+    "name": "PC HP Desktop",
+    "description": "PC desktop",
+    "price": 500.01,
+    "quantity": 25,
+    "inventory": 2,
+    "productId": "P-0001",
+    "img": "https://static.bhphoto.com/images/images500x500/1294870538000_749608.jpg"
+  },
+  {
+    "id": 2,
+    "name": "iPad 4 Mini",
+    "description": "iPad 4 Mini",
+    "price": 1000,
+    "quantity": 100,
+    "inventory": 2,
+    "productId": "P-0002",
+    "img": "https://store.storeimages.cdn-apple.com/4981/as-images.apple.com/is/image/AppleInc/aos/published/images/i/pa/ipad/pro/ipad-pro-10in-wifi-select-spacegray-201706?wid=470&hei=556&fmt=png-alpha&.v=1505500512829"
+  },
+  {
+    "id": 3,
+    "name": "Mouse",
+    "description": "Mouse PC",
+    "price": 2000,
+    "quantity": 50,
+    "inventory": 2,
+    "productId": "P-0003",
+    "img": "https://www.pcfactory.cl/public/foto/24915/1_500.jpg?t=1510017585"
+  }
+]

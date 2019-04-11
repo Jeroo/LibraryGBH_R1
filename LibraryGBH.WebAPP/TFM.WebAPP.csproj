@@ -1,0 +1,519 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup Label="Globals">
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
+    <TypeScriptToolsVersion>Latest</TypeScriptToolsVersion>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\images\blog\blog-01.jpg" />
+    <Content Remove="wwwroot\images\blog\blog-02.jpg" />
+    <Content Remove="wwwroot\images\blog\blog-03.jpg" />
+    <Content Remove="wwwroot\images\blog\blog-04.jpg" />
+    <Content Remove="wwwroot\images\blog\l-post-03.jpg" />
+    <Content Remove="wwwroot\images\blog\post-01.jpg" />
+    <Content Remove="wwwroot\images\blog\post-02.jpg" />
+    <Content Remove="wwwroot\images\blog\post-03.jpg" />
+    <Content Remove="wwwroot\images\blog\post-04.jpg" />
+    <Content Remove="wwwroot\images\blog\post-author0-1.jpg" />
+    <Content Remove="wwwroot\images\blog\recent-01.jpg" />
+    <Content Remove="wwwroot\images\blog\recent-work-01.jpg" />
+    <Content Remove="wwwroot\images\blog\recent-work-02.jpg" />
+    <Content Remove="wwwroot\images\blog\recent-work-03.jpg" />
+    <Content Remove="wwwroot\images\blog\recent-work-04.jpg" />
+    <Content Remove="wwwroot\images\blog\recent-work-05.jpg" />
+    <Content Remove="wwwroot\images\blog\recent-work-06.jpg" />
+    <Content Remove="wwwroot\images\event\event-details.jpg" />
+    <Content Remove="wwwroot\images\event\events-01.jpg" />
+    <Content Remove="wwwroot\images\event\events-02.jpg" />
+    <Content Remove="wwwroot\images\event\events-03.jpg" />
+    <Content Remove="wwwroot\images\event\events-04.jpg" />
+    <Content Remove="wwwroot\images\event\events-05.jpg" />
+    <Content Remove="wwwroot\images\event\events-06.jpg" />
+    <Content Remove="wwwroot\images\event\events-l-01.jpg" />
+    <Content Remove="wwwroot\images\event\events-l-02.jpg" />
+    <Content Remove="wwwroot\images\event\events-l-03.jpg" />
+    <Content Remove="wwwroot\images\event\events-l-04.jpg" />
+    <Content Remove="wwwroot\images\event\events-l-05.jpg" />
+    <Content Remove="wwwroot\images\event\events-l-06.jpg" />
+    <Content Remove="wwwroot\images\event\up-event-01.jpg" />
+    <Content Remove="wwwroot\images\event\up-event-02.jpg" />
+    <Content Remove="wwwroot\images\event\up-event-03.jpg" />
+    <Content Remove="wwwroot\images\favicon.ico" />
+    <Content Remove="wwwroot\images\index-02\courses-demo2-01.jpg" />
+    <Content Remove="wwwroot\images\index-02\courses-demo2-02.jpg" />
+    <Content Remove="wwwroot\images\index-02\courses-demo2-03.jpg" />
+    <Content Remove="wwwroot\images\index-02\courses-demo2-04.jpg" />
+    <Content Remove="wwwroot\images\index-02\courses-demo2-05.jpg" />
+    <Content Remove="wwwroot\images\index-02\courses-demo2-06.jpg" />
+    <Content Remove="wwwroot\images\index-02\courses-demo2-07.jpg" />
+    <Content Remove="wwwroot\images\index-02\courses-demo2-08.jpg" />
+    <Content Remove="wwwroot\images\index-02\events-01.jpg" />
+    <Content Remove="wwwroot\images\index-02\events-02.jpg" />
+    <Content Remove="wwwroot\images\index-02\footer-bg.jpg" />
+    <Content Remove="wwwroot\images\index-02\info_bg_v2.jpg" />
+    <Content Remove="wwwroot\images\index-02\instraction-bg.jpg" />
+    <Content Remove="wwwroot\images\index-02\news-01.jpg" />
+    <Content Remove="wwwroot\images\index-02\news-02.jpg" />
+    <Content Remove="wwwroot\images\index-02\news-03.jpg" />
+    <Content Remove="wwwroot\images\index-02\parent-say-bg.jpg" />
+    <Content Remove="wwwroot\images\index-02\register-bg.jpg" />
+    <Content Remove="wwwroot\images\index-02\slide-03.jpg" />
+    <Content Remove="wwwroot\images\index-02\slide-04.jpg" />
+    <Content Remove="wwwroot\images\index-02\teachar-01.jpg" />
+    <Content Remove="wwwroot\images\index-02\teachar-02.jpg" />
+    <Content Remove="wwwroot\images\index-02\teachar-03.jpg" />
+    <Content Remove="wwwroot\images\index-02\teachar-04.jpg" />
+    <Content Remove="wwwroot\images\index-02\welcome-01.png" />
+    <Content Remove="wwwroot\images\index-02\welcome-02.png" />
+    <Content Remove="wwwroot\images\index-02\welcome-03.png" />
+    <Content Remove="wwwroot\images\index-03\achievment-bg.jpg" />
+    <Content Remove="wwwroot\images\index-03\achievment-shap.png" />
+    <Content Remove="wwwroot\images\index-03\all-stu-count-bg.jpg" />
+    <Content Remove="wwwroot\images\index-03\banner-bg.jpg" />
+    <Content Remove="wwwroot\images\index-03\counter-icon-01.png" />
+    <Content Remove="wwwroot\images\index-03\counter-icon-02.png" />
+    <Content Remove="wwwroot\images\index-03\counter-icon-03.png" />
+    <Content Remove="wwwroot\images\index-03\counter-icon-04.png" />
+    <Content Remove="wwwroot\images\index-03\courses-01.jpg" />
+    <Content Remove="wwwroot\images\index-03\courses-02.jpg" />
+    <Content Remove="wwwroot\images\index-03\courses-03.jpg" />
+    <Content Remove="wwwroot\images\index-03\courses-04.jpg" />
+    <Content Remove="wwwroot\images\index-03\courses-05.jpg" />
+    <Content Remove="wwwroot\images\index-03\down-arrow.png" />
+    <Content Remove="wwwroot\images\index-03\event-time-bg.jpg" />
+    <Content Remove="wwwroot\images\index-03\footer-bg.jpg" />
+    <Content Remove="wwwroot\images\index-03\gallery-01.jpg" />
+    <Content Remove="wwwroot\images\index-03\gallery-02.jpg" />
+    <Content Remove="wwwroot\images\index-03\gallery-03.jpg" />
+    <Content Remove="wwwroot\images\index-03\gallery-04.jpg" />
+    <Content Remove="wwwroot\images\index-03\gallery-05.jpg" />
+    <Content Remove="wwwroot\images\index-03\gallery-06.jpg" />
+    <Content Remove="wwwroot\images\index-03\gallery-07.jpg" />
+    <Content Remove="wwwroot\images\index-03\gallery-08.jpg" />
+    <Content Remove="wwwroot\images\index-03\news-01.jpg" />
+    <Content Remove="wwwroot\images\index-03\news-02.jpg" />
+    <Content Remove="wwwroot\images\index-03\news-03.jpg" />
+    <Content Remove="wwwroot\images\index-03\parent-say-bg.jpg" />
+    <Content Remove="wwwroot\images\index-03\partner-01.jpg" />
+    <Content Remove="wwwroot\images\index-03\partner-02.jpg" />
+    <Content Remove="wwwroot\images\index-03\partner-03.jpg" />
+    <Content Remove="wwwroot\images\index-03\partner-04.jpg" />
+    <Content Remove="wwwroot\images\index-03\partner-05.jpg" />
+    <Content Remove="wwwroot\images\index-03\partner-06.jpg" />
+    <Content Remove="wwwroot\images\index-03\partner-logo-01.png" />
+    <Content Remove="wwwroot\images\index-03\partner-logo-02.png" />
+    <Content Remove="wwwroot\images\index-03\partner-logo-03.png" />
+    <Content Remove="wwwroot\images\index-03\partner-logo-04.png" />
+    <Content Remove="wwwroot\images\index-03\partner-logo-05.png" />
+    <Content Remove="wwwroot\images\index-03\partner-logo-06.png" />
+    <Content Remove="wwwroot\images\index-03\partner-logo-07.png" />
+    <Content Remove="wwwroot\images\index-03\scarch-bg.jpg" />
+    <Content Remove="wwwroot\images\index-03\welcome.jpg" />
+    <Content Remove="wwwroot\images\index-03\wel_shap.png" />
+    <Content Remove="wwwroot\images\index-04\author-01.jpg" />
+    <Content Remove="wwwroot\images\index-04\author-02.jpg" />
+    <Content Remove="wwwroot\images\index-04\author-03.jpg" />
+    <Content Remove="wwwroot\images\index-04\courses-01.jpg" />
+    <Content Remove="wwwroot\images\index-04\courses-02.jpg" />
+    <Content Remove="wwwroot\images\index-04\courses-03.jpg" />
+    <Content Remove="wwwroot\images\index-04\courses-04.jpg" />
+    <Content Remove="wwwroot\images\index-04\courses-05.jpg" />
+    <Content Remove="wwwroot\images\index-04\courses-06.jpg" />
+    <Content Remove="wwwroot\images\index-04\event-time-bg.jpg" />
+    <Content Remove="wwwroot\images\index-04\facilities-01.jpg" />
+    <Content Remove="wwwroot\images\index-04\facilities-02.jpg" />
+    <Content Remove="wwwroot\images\index-04\facilities-03.jpg" />
+    <Content Remove="wwwroot\images\index-04\footer-bg.jpg" />
+    <Content Remove="wwwroot\images\index-04\latest_news.jpg" />
+    <Content Remove="wwwroot\images\index-04\regi-shap.png" />
+    <Content Remove="wwwroot\images\index-04\regirster-bg.jpg" />
+    <Content Remove="wwwroot\images\index-04\slider-01.jpg" />
+    <Content Remove="wwwroot\images\index-04\slider-02.jpg" />
+    <Content Remove="wwwroot\images\index-04\trausted-stu.jpg" />
+    <Content Remove="wwwroot\images\index-04\video-bg.jpg" />
+    <Content Remove="wwwroot\images\index\arror-02-left.png" />
+    <Content Remove="wwwroot\images\index\arror-02-right.png" />
+    <Content Remove="wwwroot\images\index\arror_left.png" />
+    <Content Remove="wwwroot\images\index\arror_left_hover.png" />
+    <Content Remove="wwwroot\images\index\arror_right.png" />
+    <Content Remove="wwwroot\images\index\arror_right_hover.png" />
+    <Content Remove="wwwroot\images\index\counter-bg.jpg" />
+    <Content Remove="wwwroot\images\index\counter-icon-01.png" />
+    <Content Remove="wwwroot\images\index\counter-icon-02.png" />
+    <Content Remove="wwwroot\images\index\counter-icon-03.png" />
+    <Content Remove="wwwroot\images\index\counter-icon-04.png" />
+    <Content Remove="wwwroot\images\index\counter-shape-bg.png" />
+    <Content Remove="wwwroot\images\index\courses-01.jpg" />
+    <Content Remove="wwwroot\images\index\courses-02.jpg" />
+    <Content Remove="wwwroot\images\index\courses-03.jpg" />
+    <Content Remove="wwwroot\images\index\courses-04.jpg" />
+    <Content Remove="wwwroot\images\index\courses-05.jpg" />
+    <Content Remove="wwwroot\images\index\courses-06.jpg" />
+    <Content Remove="wwwroot\images\index\events-01.jpg" />
+    <Content Remove="wwwroot\images\index\events-02.jpg" />
+    <Content Remove="wwwroot\images\index\footer-bg.jpg" />
+    <Content Remove="wwwroot\images\index\info_bg_v2.jpg" />
+    <Content Remove="wwwroot\images\index\instraction-bg.jpg" />
+    <Content Remove="wwwroot\images\index\news-01.jpg" />
+    <Content Remove="wwwroot\images\index\news-02.jpg" />
+    <Content Remove="wwwroot\images\index\news-03.jpg" />
+    <Content Remove="wwwroot\images\index\news-bg.jpg" />
+    <Content Remove="wwwroot\images\index\publicaton-01.jpg" />
+    <Content Remove="wwwroot\images\index\publicaton-02.jpg" />
+    <Content Remove="wwwroot\images\index\publicaton-03.jpg" />
+    <Content Remove="wwwroot\images\index\publicaton-04.jpg" />
+    <Content Remove="wwwroot\images\index\quotation-01.png" />
+    <Content Remove="wwwroot\images\index\quotation-02.png" />
+    <Content Remove="wwwroot\images\index\slide-bottom-01.png" />
+    <Content Remove="wwwroot\images\index\slide-bottom-02.png" />
+    <Content Remove="wwwroot\images\index\slide-bottom-03.png" />
+    <Content Remove="wwwroot\images\index\slide-btm-01.jpg" />
+    <Content Remove="wwwroot\images\index\slide-btm-02.jpg" />
+    <Content Remove="wwwroot\images\index\slide-btm-03.jpg" />
+    <Content Remove="wwwroot\images\index\slider-01.jpg" />
+    <Content Remove="wwwroot\images\index\slider-02.jpg" />
+    <Content Remove="wwwroot\images\index\stu-parent-01.jpg" />
+    <Content Remove="wwwroot\images\index\stu-parent-02.jpg" />
+    <Content Remove="wwwroot\images\index\stu-parent-03.jpg" />
+    <Content Remove="wwwroot\images\index\stu-parent-04.jpg" />
+    <Content Remove="wwwroot\images\index\teachar-s-01.jpg" />
+    <Content Remove="wwwroot\images\index\teachar-s-02.jpg" />
+    <Content Remove="wwwroot\images\index\teachar-s-03.jpg" />
+    <Content Remove="wwwroot\images\index\teachar-s-04.jpg" />
+    <Content Remove="wwwroot\images\index\teachar-s-05.jpg" />
+    <Content Remove="wwwroot\images\index\teachar-s-06.jpg" />
+    <Content Remove="wwwroot\images\index\video-bg.jpg" />
+    <Content Remove="wwwroot\images\index\welcome.png" />
+    <Content Remove="wwwroot\images\loader.gif" />
+    <Content Remove="wwwroot\images\logo.png" />
+    <Content Remove="wwwroot\images\post\l-post-03.jpg" />
+    <Content Remove="wwwroot\images\post\post-01.jpg" />
+    <Content Remove="wwwroot\images\post\post-author0-1.jpg" />
+    <Content Remove="wwwroot\images\post\recent-work-01.jpg" />
+    <Content Remove="wwwroot\images\post\recent-work-02.jpg" />
+    <Content Remove="wwwroot\images\post\recent-work-03.jpg" />
+    <Content Remove="wwwroot\images\post\recent-work-04.jpg" />
+    <Content Remove="wwwroot\images\post\recent-work-05.jpg" />
+    <Content Remove="wwwroot\images\post\recent-work-06.jpg" />
+    <Content Remove="wwwroot\images\preloader.gif" />
+    <Content Remove="wwwroot\images\register-bg.jpg" />
+    <Content Remove="wwwroot\images\Single_cources\banner-bg.jpg" />
+    <Content Remove="wwwroot\images\Single_cources\comment-01.jpg" />
+    <Content Remove="wwwroot\images\Single_cources\course-author.jpg" />
+    <Content Remove="wwwroot\images\Single_cources\curses-details.jpg" />
+    <Content Remove="wwwroot\images\Single_cources\discount-offer.jpg" />
+    <Content Remove="wwwroot\images\Single_cources\l-courses-01.jpg" />
+    <Content Remove="wwwroot\images\Single_cources\l-courses-02.jpg" />
+    <Content Remove="wwwroot\images\Single_cources\l-courses-03.jpg" />
+    <Content Remove="wwwroot\images\Single_cources\l-courses-04.jpg" />
+    <Content Remove="wwwroot\images\Single_cources\l-post-01.jpg" />
+    <Content Remove="wwwroot\images\Single_cources\l-post-02.jpg" />
+    <Content Remove="wwwroot\images\Single_cources\l-post-03.jpg" />
+    <Content Remove="wwwroot\images\teachars\become-teacher.jpg" />
+    <Content Remove="wwwroot\images\teachars\instractor-01.jpg" />
+    <Content Remove="wwwroot\images\teachars\latest-01.jpg" />
+    <Content Remove="wwwroot\images\teachars\latest-02.jpg" />
+    <Content Remove="wwwroot\images\teachars\latest-03.jpg" />
+    <Content Remove="wwwroot\images\teachars\t-profile-01.jpg" />
+    <Content Remove="wwwroot\images\teachars\teachar-01.jpg" />
+    <Content Remove="wwwroot\images\teachars\teachar-02.jpg" />
+    <Content Remove="wwwroot\images\teachars\teachar-03.jpg" />
+    <Content Remove="wwwroot\images\teachars\teachar-04.jpg" />
+    <Content Remove="wwwroot\images\teachars\teachar-05.jpg" />
+    <Content Remove="wwwroot\images\teachars\teachar-06.jpg" />
+    <Content Remove="wwwroot\images\teachars\teachar-07.jpg" />
+    <Content Remove="wwwroot\images\teachars\teachar-08.jpg" />
+    <Content Remove="wwwroot\images\teachars\teachar-09.jpg" />
+    <Content Remove="wwwroot\images\teachars\teachar-10.jpg" />
+    <Content Remove="wwwroot\css\style.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="ClientApp\components\header\header.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\images\blog\blog-01.jpg" />
+    <None Include="wwwroot\images\blog\blog-02.jpg" />
+    <None Include="wwwroot\images\blog\blog-03.jpg" />
+    <None Include="wwwroot\images\blog\blog-04.jpg" />
+    <None Include="wwwroot\images\blog\l-post-03.jpg" />
+    <None Include="wwwroot\images\blog\post-01.jpg" />
+    <None Include="wwwroot\images\blog\post-02.jpg" />
+    <None Include="wwwroot\images\blog\post-03.jpg" />
+    <None Include="wwwroot\images\blog\post-04.jpg" />
+    <None Include="wwwroot\images\blog\post-author0-1.jpg" />
+    <None Include="wwwroot\images\blog\recent-01.jpg" />
+    <None Include="wwwroot\images\blog\recent-work-01.jpg" />
+    <None Include="wwwroot\images\blog\recent-work-02.jpg" />
+    <None Include="wwwroot\images\blog\recent-work-03.jpg" />
+    <None Include="wwwroot\images\blog\recent-work-04.jpg" />
+    <None Include="wwwroot\images\blog\recent-work-05.jpg" />
+    <None Include="wwwroot\images\blog\recent-work-06.jpg" />
+    <None Include="wwwroot\images\event\event-details.jpg" />
+    <None Include="wwwroot\images\event\events-01.jpg" />
+    <None Include="wwwroot\images\event\events-02.jpg" />
+    <None Include="wwwroot\images\event\events-03.jpg" />
+    <None Include="wwwroot\images\event\events-04.jpg" />
+    <None Include="wwwroot\images\event\events-05.jpg" />
+    <None Include="wwwroot\images\event\events-06.jpg" />
+    <None Include="wwwroot\images\event\events-l-01.jpg" />
+    <None Include="wwwroot\images\event\events-l-02.jpg" />
+    <None Include="wwwroot\images\event\events-l-03.jpg" />
+    <None Include="wwwroot\images\event\events-l-04.jpg" />
+    <None Include="wwwroot\images\event\events-l-05.jpg" />
+    <None Include="wwwroot\images\event\events-l-06.jpg" />
+    <None Include="wwwroot\images\event\up-event-01.jpg" />
+    <None Include="wwwroot\images\event\up-event-02.jpg" />
+    <None Include="wwwroot\images\event\up-event-03.jpg" />
+    <None Include="wwwroot\images\favicon.ico" />
+    <None Include="wwwroot\images\index-02\courses-demo2-01.jpg" />
+    <None Include="wwwroot\images\index-02\courses-demo2-02.jpg" />
+    <None Include="wwwroot\images\index-02\courses-demo2-03.jpg" />
+    <None Include="wwwroot\images\index-02\courses-demo2-04.jpg" />
+    <None Include="wwwroot\images\index-02\courses-demo2-05.jpg" />
+    <None Include="wwwroot\images\index-02\courses-demo2-06.jpg" />
+    <None Include="wwwroot\images\index-02\courses-demo2-07.jpg" />
+    <None Include="wwwroot\images\index-02\courses-demo2-08.jpg" />
+    <None Include="wwwroot\images\index-02\events-01.jpg" />
+    <None Include="wwwroot\images\index-02\events-02.jpg" />
+    <None Include="wwwroot\images\index-02\footer-bg.jpg" />
+    <None Include="wwwroot\images\index-02\info_bg_v2.jpg" />
+    <None Include="wwwroot\images\index-02\instraction-bg.jpg" />
+    <None Include="wwwroot\images\index-02\news-01.jpg" />
+    <None Include="wwwroot\images\index-02\news-02.jpg" />
+    <None Include="wwwroot\images\index-02\news-03.jpg" />
+    <None Include="wwwroot\images\index-02\parent-say-bg.jpg" />
+    <None Include="wwwroot\images\index-02\register-bg.jpg" />
+    <None Include="wwwroot\images\index-02\slide-03.jpg" />
+    <None Include="wwwroot\images\index-02\slide-04.jpg" />
+    <None Include="wwwroot\images\index-02\teachar-01.jpg" />
+    <None Include="wwwroot\images\index-02\teachar-02.jpg" />
+    <None Include="wwwroot\images\index-02\teachar-03.jpg" />
+    <None Include="wwwroot\images\index-02\teachar-04.jpg" />
+    <None Include="wwwroot\images\index-02\welcome-01.png" />
+    <None Include="wwwroot\images\index-02\welcome-02.png" />
+    <None Include="wwwroot\images\index-02\welcome-03.png" />
+    <None Include="wwwroot\images\index-03\achievment-bg.jpg" />
+    <None Include="wwwroot\images\index-03\achievment-shap.png" />
+    <None Include="wwwroot\images\index-03\all-stu-count-bg.jpg" />
+    <None Include="wwwroot\images\index-03\banner-bg.jpg" />
+    <None Include="wwwroot\images\index-03\counter-icon-01.png" />
+    <None Include="wwwroot\images\index-03\counter-icon-02.png" />
+    <None Include="wwwroot\images\index-03\counter-icon-03.png" />
+    <None Include="wwwroot\images\index-03\counter-icon-04.png" />
+    <None Include="wwwroot\images\index-03\courses-01.jpg" />
+    <None Include="wwwroot\images\index-03\courses-02.jpg" />
+    <None Include="wwwroot\images\index-03\courses-03.jpg" />
+    <None Include="wwwroot\images\index-03\courses-04.jpg" />
+    <None Include="wwwroot\images\index-03\courses-05.jpg" />
+    <None Include="wwwroot\images\index-03\down-arrow.png" />
+    <None Include="wwwroot\images\index-03\event-time-bg.jpg" />
+    <None Include="wwwroot\images\index-03\footer-bg.jpg" />
+    <None Include="wwwroot\images\index-03\gallery-01.jpg" />
+    <None Include="wwwroot\images\index-03\gallery-02.jpg" />
+    <None Include="wwwroot\images\index-03\gallery-03.jpg" />
+    <None Include="wwwroot\images\index-03\gallery-04.jpg" />
+    <None Include="wwwroot\images\index-03\gallery-05.jpg" />
+    <None Include="wwwroot\images\index-03\gallery-06.jpg" />
+    <None Include="wwwroot\images\index-03\gallery-07.jpg" />
+    <None Include="wwwroot\images\index-03\gallery-08.jpg" />
+    <None Include="wwwroot\images\index-03\news-01.jpg" />
+    <None Include="wwwroot\images\index-03\news-02.jpg" />
+    <None Include="wwwroot\images\index-03\news-03.jpg" />
+    <None Include="wwwroot\images\index-03\parent-say-bg.jpg" />
+    <None Include="wwwroot\images\index-03\partner-01.jpg" />
+    <None Include="wwwroot\images\index-03\partner-02.jpg" />
+    <None Include="wwwroot\images\index-03\partner-03.jpg" />
+    <None Include="wwwroot\images\index-03\partner-04.jpg" />
+    <None Include="wwwroot\images\index-03\partner-05.jpg" />
+    <None Include="wwwroot\images\index-03\partner-06.jpg" />
+    <None Include="wwwroot\images\index-03\partner-logo-01.png" />
+    <None Include="wwwroot\images\index-03\partner-logo-02.png" />
+    <None Include="wwwroot\images\index-03\partner-logo-03.png" />
+    <None Include="wwwroot\images\index-03\partner-logo-04.png" />
+    <None Include="wwwroot\images\index-03\partner-logo-05.png" />
+    <None Include="wwwroot\images\index-03\partner-logo-06.png" />
+    <None Include="wwwroot\images\index-03\partner-logo-07.png" />
+    <None Include="wwwroot\images\index-03\scarch-bg.jpg" />
+    <None Include="wwwroot\images\index-03\welcome.jpg" />
+    <None Include="wwwroot\images\index-03\wel_shap.png" />
+    <None Include="wwwroot\images\index-04\author-01.jpg" />
+    <None Include="wwwroot\images\index-04\author-02.jpg" />
+    <None Include="wwwroot\images\index-04\author-03.jpg" />
+    <None Include="wwwroot\images\index-04\courses-01.jpg" />
+    <None Include="wwwroot\images\index-04\courses-02.jpg" />
+    <None Include="wwwroot\images\index-04\courses-03.jpg" />
+    <None Include="wwwroot\images\index-04\courses-04.jpg" />
+    <None Include="wwwroot\images\index-04\courses-05.jpg" />
+    <None Include="wwwroot\images\index-04\courses-06.jpg" />
+    <None Include="wwwroot\images\index-04\event-time-bg.jpg" />
+    <None Include="wwwroot\images\index-04\facilities-01.jpg" />
+    <None Include="wwwroot\images\index-04\facilities-02.jpg" />
+    <None Include="wwwroot\images\index-04\facilities-03.jpg" />
+    <None Include="wwwroot\images\index-04\footer-bg.jpg" />
+    <None Include="wwwroot\images\index-04\latest_news.jpg" />
+    <None Include="wwwroot\images\index-04\regi-shap.png" />
+    <None Include="wwwroot\images\index-04\regirster-bg.jpg" />
+    <None Include="wwwroot\images\index-04\slider-01.jpg" />
+    <None Include="wwwroot\images\index-04\slider-02.jpg" />
+    <None Include="wwwroot\images\index-04\trausted-stu.jpg" />
+    <None Include="wwwroot\images\index-04\video-bg.jpg" />
+    <None Include="wwwroot\images\index\arror-02-left.png" />
+    <None Include="wwwroot\images\index\arror-02-right.png" />
+    <None Include="wwwroot\images\index\arror_left.png" />
+    <None Include="wwwroot\images\index\arror_left_hover.png" />
+    <None Include="wwwroot\images\index\arror_right.png" />
+    <None Include="wwwroot\images\index\arror_right_hover.png" />
+    <None Include="wwwroot\images\index\counter-bg.jpg" />
+    <None Include="wwwroot\images\index\counter-icon-01.png" />
+    <None Include="wwwroot\images\index\counter-icon-02.png" />
+    <None Include="wwwroot\images\index\counter-icon-03.png" />
+    <None Include="wwwroot\images\index\counter-icon-04.png" />
+    <None Include="wwwroot\images\index\counter-shape-bg.png" />
+    <None Include="wwwroot\images\index\courses-01.jpg" />
+    <None Include="wwwroot\images\index\courses-02.jpg" />
+    <None Include="wwwroot\images\index\courses-03.jpg" />
+    <None Include="wwwroot\images\index\courses-04.jpg" />
+    <None Include="wwwroot\images\index\courses-05.jpg" />
+    <None Include="wwwroot\images\index\courses-06.jpg" />
+    <None Include="wwwroot\images\index\events-01.jpg" />
+    <None Include="wwwroot\images\index\events-02.jpg" />
+    <None Include="wwwroot\images\index\footer-bg.jpg" />
+    <None Include="wwwroot\images\index\info_bg_v2.jpg" />
+    <None Include="wwwroot\images\index\instraction-bg.jpg" />
+    <None Include="wwwroot\images\index\news-01.jpg" />
+    <None Include="wwwroot\images\index\news-02.jpg" />
+    <None Include="wwwroot\images\index\news-03.jpg" />
+    <None Include="wwwroot\images\index\news-bg.jpg" />
+    <None Include="wwwroot\images\index\publicaton-01.jpg" />
+    <None Include="wwwroot\images\index\publicaton-02.jpg" />
+    <None Include="wwwroot\images\index\publicaton-03.jpg" />
+    <None Include="wwwroot\images\index\publicaton-04.jpg" />
+    <None Include="wwwroot\images\index\quotation-01.png" />
+    <None Include="wwwroot\images\index\quotation-02.png" />
+    <None Include="wwwroot\images\index\slide-bottom-01.png" />
+    <None Include="wwwroot\images\index\slide-bottom-02.png" />
+    <None Include="wwwroot\images\index\slide-bottom-03.png" />
+    <None Include="wwwroot\images\index\slide-btm-01.jpg" />
+    <None Include="wwwroot\images\index\slide-btm-02.jpg" />
+    <None Include="wwwroot\images\index\slide-btm-03.jpg" />
+    <None Include="wwwroot\images\index\slider-01.jpg" />
+    <None Include="wwwroot\images\index\slider-02.jpg" />
+    <None Include="wwwroot\images\index\stu-parent-01.jpg" />
+    <None Include="wwwroot\images\index\stu-parent-02.jpg" />
+    <None Include="wwwroot\images\index\stu-parent-03.jpg" />
+    <None Include="wwwroot\images\index\stu-parent-04.jpg" />
+    <None Include="wwwroot\images\index\teachar-s-01.jpg" />
+    <None Include="wwwroot\images\index\teachar-s-02.jpg" />
+    <None Include="wwwroot\images\index\teachar-s-03.jpg" />
+    <None Include="wwwroot\images\index\teachar-s-04.jpg" />
+    <None Include="wwwroot\images\index\teachar-s-05.jpg" />
+    <None Include="wwwroot\images\index\teachar-s-06.jpg" />
+    <None Include="wwwroot\images\index\video-bg.jpg" />
+    <None Include="wwwroot\images\index\welcome.png" />
+    <None Include="wwwroot\images\loader.gif" />
+    <None Include="wwwroot\images\logo.png" />
+    <None Include="wwwroot\images\post\l-post-03.jpg" />
+    <None Include="wwwroot\images\post\post-01.jpg" />
+    <None Include="wwwroot\images\post\post-author0-1.jpg" />
+    <None Include="wwwroot\images\post\recent-work-01.jpg" />
+    <None Include="wwwroot\images\post\recent-work-02.jpg" />
+    <None Include="wwwroot\images\post\recent-work-03.jpg" />
+    <None Include="wwwroot\images\post\recent-work-04.jpg" />
+    <None Include="wwwroot\images\post\recent-work-05.jpg" />
+    <None Include="wwwroot\images\post\recent-work-06.jpg" />
+    <None Include="wwwroot\images\preloader.gif" />
+    <None Include="wwwroot\images\register-bg.jpg" />
+    <None Include="wwwroot\images\Single_cources\banner-bg.jpg" />
+    <None Include="wwwroot\images\Single_cources\comment-01.jpg" />
+    <None Include="wwwroot\images\Single_cources\course-author.jpg" />
+    <None Include="wwwroot\images\Single_cources\curses-details.jpg" />
+    <None Include="wwwroot\images\Single_cources\discount-offer.jpg" />
+    <None Include="wwwroot\images\Single_cources\l-courses-01.jpg" />
+    <None Include="wwwroot\images\Single_cources\l-courses-02.jpg" />
+    <None Include="wwwroot\images\Single_cources\l-courses-03.jpg" />
+    <None Include="wwwroot\images\Single_cources\l-courses-04.jpg" />
+    <None Include="wwwroot\images\Single_cources\l-post-01.jpg" />
+    <None Include="wwwroot\images\Single_cources\l-post-02.jpg" />
+    <None Include="wwwroot\images\Single_cources\l-post-03.jpg" />
+    <None Include="wwwroot\images\teachars\become-teacher.jpg" />
+    <None Include="wwwroot\images\teachars\instractor-01.jpg" />
+    <None Include="wwwroot\images\teachars\latest-01.jpg" />
+    <None Include="wwwroot\images\teachars\latest-02.jpg" />
+    <None Include="wwwroot\images\teachars\latest-03.jpg" />
+    <None Include="wwwroot\images\teachars\t-profile-01.jpg" />
+    <None Include="wwwroot\images\teachars\teachar-01.jpg" />
+    <None Include="wwwroot\images\teachars\teachar-02.jpg" />
+    <None Include="wwwroot\images\teachars\teachar-03.jpg" />
+    <None Include="wwwroot\images\teachars\teachar-04.jpg" />
+    <None Include="wwwroot\images\teachars\teachar-05.jpg" />
+    <None Include="wwwroot\images\teachars\teachar-06.jpg" />
+    <None Include="wwwroot\images\teachars\teachar-07.jpg" />
+    <None Include="wwwroot\images\teachars\teachar-08.jpg" />
+    <None Include="wwwroot\images\teachars\teachar-09.jpg" />
+    <None Include="wwwroot\images\teachars\teachar-10.jpg" />
+    <None Include="wwwroot\css\style.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Core.Common.Contracts\Core.Common.Contracts.csproj" />
+    <ProjectReference Include="..\Core.Common\Core.Common.csproj" />
+    <ProjectReference Include="..\LibraryGBH.Business.Entities\LibraryGBH.Business.Entities.csproj" />
+    <ProjectReference Include="..\LibraryGBH.Business\LibraryGBH.Business.csproj" />
+    <ProjectReference Include="..\LibraryGBH.Data\LibraryGBH.Data.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\components\header\header.ts" />
+  </ItemGroup>
+
+  <Target Name="DebugRunWebpack" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('wwwroot\dist') ">
+    <!-- Ensure Node.js is installed -->
+    <Exec Command="node --version" ContinueOnError="true">
+      <Output TaskParameter="ExitCode" PropertyName="ErrorCode" />
+    </Exec>
+    <Error Condition="'$(ErrorCode)' != '0'" Text="Node.js is required to build and run this project. To continue, please install Node.js from https://nodejs.org/, and then restart your command prompt or IDE." />
+
+    <!-- In development, the dist files won't exist on the first run or when cloning to
+         a different machine, so rebuild them if not already present. -->
+    <Message Importance="high" Text="Performing first-run Webpack build..." />
+    <Exec Command="node node_modules/webpack/bin/webpack.js --config webpack.config.vendor.js" />
+    <Exec Command="node node_modules/webpack/bin/webpack.js" />
+  </Target>
+
+  <Target Name="PublishRunWebpack" AfterTargets="ComputeFilesToPublish">
+    <!-- As part of publishing, ensure the JS resources are freshly built in production mode -->
+    <Exec Command="npm install" />
+    <Exec Command="node node_modules/webpack/bin/webpack.js --config webpack.config.vendor.js --env.prod" />
+    <Exec Command="node node_modules/webpack/bin/webpack.js --env.prod" />
+
+    <!-- Include the newly-built files in the publish output -->
+    <ItemGroup>
+      <DistFiles Include="wwwroot\dist\**" />
+      <ResolvedFileToPublish Include="@(DistFiles->'%(FullPath)')" Exclude="@(ResolvedFileToPublish)">
+        <RelativePath>%(DistFiles.Identity)</RelativePath>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </ResolvedFileToPublish>
+    </ItemGroup>
+  </Target>
+
+</Project>
