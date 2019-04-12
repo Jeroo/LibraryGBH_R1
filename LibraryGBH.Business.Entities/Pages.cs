@@ -9,42 +9,43 @@ using System.Text;
 namespace LibraryGBH.Business.Entities
 {
     [DataContract]
-    [Table("Ventas")]
-    public class Ventas : IIdentifiableEntity, IAuditableEntity, IDeferrableEntity, IConcurrencyEntity
+    [Table("Pages")]
+    public class Pages : IIdentifiableEntity, IAuditableEntity, IDeferrableEntity, IConcurrencyEntity
     {
         #region Properties 
 
         [DataMember]
         [Key]
-        [Column("VentaId")]
+        [Column("PageId")]
         public long Id { get; set; }
 
         [DataMember]
-        [Column("CantidadVendidas")]
-        public long CantidadVendidas { get; set; }
+        [Column("Name")]
+        public string Text { get; set; }
 
         [DataMember]
-        [Column("FechaVenta")]
-        public DateTime? FechaVenta { get; set; }
+        [Column("Description")]
+        public string Description { get; set; }
 
         [DataMember]
-        [Column("UsuarioComprador")]
-        public Guid? UsuarioComprador { get; set; }
+        [Column("PageNumber")]
+        public long PageNumber { get; set; }
 
         #endregion
 
         #region Foreign Keys
 
-        [DataMember]
-        [ForeignKey("ProductoId")]
-        public long? ProductoId { get; set; }
+        //[DataMember]
+        //[Column("BookId")]
+        //public long BookId { get; set; }
 
         #endregion
 
         #region Navigations
 
         [DataMember]
-        public ProductosTienda ProductosTienda { get; set; }
+        public virtual Books Books { get; set; }
+
 
         #endregion
 

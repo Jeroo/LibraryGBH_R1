@@ -9,42 +9,59 @@ using System.Text;
 namespace LibraryGBH.Business.Entities
 {
     [DataContract]
-    [Table("Proveedores")]
-    public class Proveedores : IIdentifiableEntity, IAuditableEntity, IDeferrableEntity, IConcurrencyEntity
+    [Table("Books")]
+    public class Books : IIdentifiableEntity, IAuditableEntity, IDeferrableEntity, IConcurrencyEntity
     {
         #region Properties 
 
         [DataMember]
         [Key]
-        [Column("ProveedorId")]
+        [Column("BookId")]
         public long Id { get; set; }
 
         [DataMember]
-        [Column("Nombre")]
-        public string Nombre { get; set; }
+        [Column("Name")]
+        public string Name { get; set; }
 
         [DataMember]
-        [Column("CIF")]
-        public string CIF { get; set; }
+        [Column("Description")]
+        public string Description { get; set; }
 
         [DataMember]
-        [Column("Direccion")]
-        public string Direccion { get; set; }
+        [Column("Author")]
+        public string Author { get; set; }
 
         [DataMember]
-        [Column("Telefono")]
-        public string Telefono { get; set; }
+        [Column("CoverPageImg")]
+        public byte[] CoverPageImg { get; set; }
+
+        [DataMember]
+        [Column("TotalPages")]
+        public int TotalPages { get; set; }
+
+
 
         #endregion
 
         #region Foreign Keys
-        
+
+        //[DataMember]
+        //[Column("BookTypeId")]
+        //public long BookTypeId { get; set; }
+
+
         #endregion
 
         #region Navigations
 
         [DataMember]
-        public List<ProductosProveedores> ProductosProveedores { get; set; }
+        public virtual BooksTypes BooksTypes { get; set; }
+
+        [DataMember]
+        public List<Pages> Pages { get; set; }
+
+        [DataMember]
+        public List<BooksPages> BooksPages { get; set; }
 
         #endregion
 

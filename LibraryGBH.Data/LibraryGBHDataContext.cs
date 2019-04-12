@@ -48,19 +48,13 @@ namespace LibraryGBH.Data
         #region Tables
         //public virtual DbSet<Sample> Sample { get; set; }
 
-        public virtual DbSet<ProductosTienda> ProductosTienda { get; set; }
-        public virtual DbSet<ProductosPool> ProductosPool { get; set; }
-        public virtual DbSet<Ventas> Ventas { get; set; }
+        public virtual DbSet<Books> Books { get; set; }
+        public virtual DbSet<BooksFormat> BooksFormat { get; set; }
+        public virtual DbSet<Pages> Pages { get; set; }
         public virtual DbSet<Individuos> Individuos { get; set; }
-        public virtual DbSet<Inventario> Inventario { get; set; }
-        public virtual DbSet<Ordenes> Ordenes { get; set; }
+        public virtual DbSet<BooksPages> BooksPages { get; set; }
+        public virtual DbSet<BooksTypes> BooksTypes { get; set; }
         public virtual DbSet<Tickets> Tickets { get; set; }
-        public virtual DbSet<ProductosProveedores> ProductosProveedores { get; set; }
-        public virtual DbSet<Proveedores> Proveedores { get; set; }
-
-
-
-
 
         #endregion
 
@@ -70,12 +64,6 @@ namespace LibraryGBH.Data
         {
 
             base.OnModelCreating(modelBuilder);
-
-           // modelBuilder.Entity<Inventario>()
-           // .HasOne(a => a.ProductosTienda)
-           //.WithOne(b => b.Inventario)
-           //.HasForeignKey<ProductosTienda>(b => b.Id);
-
 
             modelBuilder.Entity<Users>().ToTable("Users");
 
@@ -129,7 +117,7 @@ namespace LibraryGBH.Data
             if (extConfiguration != null)
                 extConfiguration.Connection.StateChange += Connection_StateChange;
 
-           //optionsBuilder.UseSqlServer("Server=tcp:bddne.database.windows.net,1433;Database=DBSTORELibraryGBH;Persist Security Info=False;User ID=humanuser;Password=DB_PASS01@;Trusted_Connection=False;");
+            optionsBuilder.UseSqlServer("Server=LAPTOP-1OVSP5MD\\SQLEXPRESS;Database=LibraryGBH_R1;Persist Security Info=False;User ID=adminUser;Password=DB_PASS01@;Trusted_Connection=False;");
         }
 
         #endregion

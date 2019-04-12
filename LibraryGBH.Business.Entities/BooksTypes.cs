@@ -9,54 +9,35 @@ using System.Text;
 namespace LibraryGBH.Business.Entities
 {
     [DataContract]
-    [Table("Ordenes")]
-    public class Ordenes : IIdentifiableEntity, IAuditableEntity, IDeferrableEntity, IConcurrencyEntity
+    [Table("CODE_BooksTypes")]
+    public class BooksTypes : IIdentifiableEntity, IAuditableEntity, IDeferrableEntity, IConcurrencyEntity
     {
         #region Properties 
 
         [DataMember]
         [Key]
-        [Column("OrdenId")]
+        [Column("BookTypeId")]
         public long Id { get; set; }
 
         [DataMember]
-        [Column("OrdenDate")]
-        public DateTime OrdenDate { get; set; }
+        [Column("Name")]
+        public string Name { get; set; }
 
         [DataMember]
-        [Column("Total")]
-        public int Total { get; set; }
-
-        [DataMember]
-        [Column("Impuesto")]
-        public int Impuesto { get; set; }
-
-        [DataMember]
-        [Column("Subtotal")]
-        public int Subtotal { get; set; }
-
-        [DataMember]
-        [Column("Envio")]
-        public int Envio { get; set; }
-
-        [DataMember]
-        [Column("PayPalReference")]
-        public string PayPalReference { get; set; }
+        [Column("Description")]
+        public string Description { get; set; }
 
         #endregion
 
         #region Foreign Keys
 
-  
-
         #endregion
 
         #region Navigations
 
-        //[DataMember]
-        //public virtual OtherSample ElucidateType { get; set; }
+        [DataMember]
+        public List<Books> Books { get; set; }
 
-        public List<ProductosTienda> ProductosTienda { get; set; }
 
         #endregion
 
