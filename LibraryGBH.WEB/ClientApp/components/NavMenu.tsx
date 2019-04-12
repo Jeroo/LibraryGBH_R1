@@ -62,7 +62,7 @@ export class NavMenu extends React.Component<IAuth, any> {
         return <nav className='light-blue lighten-1 nav-extended' role='navigation'>
            
                 <div className='nav-wrapper container'><a id='logo-container' href='#' className='brand-logo'>
-                <img src={require('../images/logo3.png')} style={{ width: 100, height: 80 }} alt="Logo de la tienda" /></a>
+                <img src={require('../images/library-icon.png')} style={{ width: 110, height: 59 }} alt="Logo de la tienda" /></a>
 
 
                 {this.state.userAutenticated ? 
@@ -70,26 +70,8 @@ export class NavMenu extends React.Component<IAuth, any> {
                     <ul id='nav-mobile' className='right hide-on-med-and-down'>
                         <li>
                             <NavLink to={'/'} exact activeClassName='active jquery'>
-                                <span className='glyphicon glyphicon-home'></span> Tienda
+                                <span className='glyphicon glyphicon-home'></span> Libros
                             </NavLink>
-                        </li>
-                        <li className='cart-container'>
-
-                            <NavLink to={'/ShoppingCart'} activeClassName='active' className='cart'>
-                                <span className='glyphicon glyphicon-shopping-cart'>
-                                    
-                                        {
-                                            sessionStorage.getItem("CountProducts") !== null ? 
-                                                
-                                            <span className="itemCount">{sessionStorage.getItem("CountProducts")}</span>
-                                                :
-                                                  <span></span>
-                                        }
-                                   
-                                </span> Carrito
-
-                        </NavLink>
-
                         </li>
                         <li>
                             <NavLink to={''} activeClassName='active'>
@@ -111,25 +93,8 @@ export class NavMenu extends React.Component<IAuth, any> {
                     <ul id='nav-mobile' className='right hide-on-med-and-down'>
                         <li>
                             <NavLink to={'/'} exact activeClassName='active jquery'>
-                                <span className='glyphicon glyphicon-home'></span> Tienda
+                                <span className='glyphicon glyphicon-home'></span> Libros
                             </NavLink>
-                        </li>
-                        <li className='cart-container'>
-
-                            <NavLink to={'/ShoppingCart'} activeClassName='active' className='cart'>
-                                <span className='glyphicon glyphicon-shopping-cart'>
-                                {
-                                    sessionStorage.getItem("CountProducts") !== null ?
-
-                                            <span className="itemCount"> {sessionStorage.getItem("CountProducts")}</span>
-                                        :
-                                        <span></span>
-                                }
-                                   
-                                </span> Carrito
-
-                        </NavLink>
-
                         </li>
 
                         <li>
@@ -155,26 +120,8 @@ export class NavMenu extends React.Component<IAuth, any> {
                     <ul id='nav-mobile' className='nav navbar-nav sidenav'>
                         <li>
                             <NavLink to={'/'} exact activeClassName='active jquery'>
-                                <span className='glyphicon glyphicon-home'></span> Tienda
+                                <span className='glyphicon glyphicon-home'></span> Libros
                             </NavLink>
-                        </li>
-                        <li className='cart-container'>
-
-                            <NavLink to={'/fetchdata'} activeClassName='active' className='cart'>
-
-
-
-                            <span className='glyphicon glyphicon-shopping-cart'> {
-                                sessionStorage.getItem("CountProducts") !== null ?
-
-                                    <span className="itemCount"> {sessionStorage.getItem("CountProducts")}</span>
-                                    :
-                                    <span></span>
-                            }
-                                   </span> Carrito
-
-                        </NavLink>
-
                         </li>
                         <li>
                             <NavLink to={'/login'} activeClassName='active'>
@@ -189,49 +136,6 @@ export class NavMenu extends React.Component<IAuth, any> {
                     </ul>
                     <a href='#' data-target='nav-mobile' className='sidenav-trigger'><span className='glyphicon glyphicon-th-list'>menu</span></a>
             </div>
-
-            {this.state.userAutenticated && String(sessionStorage.getItem('user')).toLowerCase() === "admin" ?
-                    <div className="nav-content">
-                    <ul className="tabs tabs-transparent">
-
-                        <li className="tab">
-
-                            <NavLink to={'/ProductList'} activeClassName='active'>
-                                <span className='glyphicon glyphicon-plus-sign'></span> Lista de Productos
-                            </NavLink>
-
-                        </li>
-
-                        <li className="tab">
-
-                            <NavLink to={'/ReplenishProduct'} activeClassName='active'>
-                                <span className='glyphicon glyphicon-plus-sign'></span> Reponer
-                            </NavLink>
-
-                        </li>
-                        <li className="tab">
-                            <NavLink to={'/AddEditProduct'} activeClassName='active'>
-                                <span className='glyphicon glyphicon-plus'></span> Agregar
-                            </NavLink>
-
-                        </li>
-                        <li className="tab">
-                            <NavLink to={'/ReplenishProductProviders'} activeClassName='active'>
-                                <span className='glyphicon glyphicon-menu-right'></span> Reponer desde Proveedores
-                            </NavLink>
-
-                        </li>
-                        <li className="tab">
-                            <NavLink to={'/Reports'} activeClassName='active'>
-                                <span className='glyphicon glyphicon-briefcase'></span> Reportes
-                            </NavLink>
-
-                        </li>
-                        </ul>
-                    </div>
-                :
-                <div></div>
-              }
           
         </nav>;
     }

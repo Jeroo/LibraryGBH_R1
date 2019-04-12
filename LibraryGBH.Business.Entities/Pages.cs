@@ -20,7 +20,7 @@ namespace LibraryGBH.Business.Entities
         public long Id { get; set; }
 
         [DataMember]
-        [Column("Name")]
+        [Column("Text")]
         public string Text { get; set; }
 
         [DataMember]

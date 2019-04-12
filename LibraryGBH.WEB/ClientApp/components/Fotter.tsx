@@ -12,7 +12,7 @@ export class Fotter extends React.Component<{}, {}> {
             <div className='container'>
                 <div className='row'>
                     <div className='col l6 s12'>
-                        <h5 className='white-text'>PC STORE - LibraryGBH</h5>
+                        <h5 className='white-text'>LibraryGBH</h5>
                         <p className='grey-text text-lighten-4'>Proyecto realizado en Core 2 con Visual Studio 2017</p>
 
 

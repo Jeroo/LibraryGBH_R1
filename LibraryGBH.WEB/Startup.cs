@@ -85,7 +85,7 @@ namespace LibraryGBH.WEB
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
             //Engines injection
-            services.AddTransient<IProductEngine, ProductEngine>();
+            services.AddTransient<IBookEngine, BookEngine>();
 
             // Add application services.
             //services.AddTransient<IEmailSender, EmailSender>();

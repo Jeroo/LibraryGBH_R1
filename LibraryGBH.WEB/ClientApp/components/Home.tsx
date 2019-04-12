@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { RouteComponentProps } from 'react-router';
-import { Product } from './Product';
+import { Book } from './Book';
 //import Loader from 'react-loader-spinner';
 import axios from 'axios';
 import { FormEvent } from 'react';
@@ -10,50 +10,34 @@ import { Alert } from 'react-bootstrap';
 
 
 
-interface FetchDataProductState {
-    products: IProductList[];
+interface FetchDataBookState {
+    books: IBookList[];
     loading: boolean;
     param: string;
 }
 
-export class Home extends React.Component<RouteComponentProps<{}>, FetchDataProductState> {
+export class Home extends React.Component<RouteComponentProps<{}>, FetchDataBookState> {
 
     constructor() {
 
         super();
-        this.state = { products: [], loading: true, param: "" };
+        this.state = { books: [], loading: true, param: "" };
         this.handleUpdate = this.handleUpdate.bind(this);
 
     }
 
     
     componentDidMount() {
-       
-        
-        this.initListProduct("");
+
+        this.initListBook();
     }
 
-    public initListProduct(param: string) {
+    public initListBook() {
 
-        console.log("Parametro Consultado: " + param)
-        if (param === "") {
-
-            axios.get(`api/Product/listaproductos`)
-                .then(res => {
-                    this.setState({ products: res.data, loading: false });
-                })
-
-        } else {
-
-            axios.get(`api/Product/listaproductos`, {
-                params: {
-                    param: param
-                }
-              })
-                .then(res => {
-                    this.setState({ products: res.data, loading: false });
-                })
-        }
+        axios.get(`api/Book/listbooks`)
+            .then(res => {
+                this.setState({ books: res.data, loading: false });
+            })
        
 
     }
@@ -63,10 +47,8 @@ export class Home extends React.Component<RouteComponentProps<{}>, FetchDataProd
         const value = e.currentTarget.value;
         this.setState({ param: value });
         this.setState({ loading: true });
-        this.initListProduct(this.state.param);       
+        this.initListBook();       
     }
-
-
 
   
     public render() {
@@ -76,57 +58,48 @@ export class Home extends React.Component<RouteComponentProps<{}>, FetchDataProd
                 <ReactLoading type="spin" color="blue" height={667} width={375} /></div>
 
 
-            : Home.renderListProducts(this.state.products);
+            : Home.renderListBooks(this.state.books);
 
             return <div>              
 
                     <Alert bsStyle="info">
-                        <strong>Tienda de Productos Informaticos</strong> 
-                    </Alert>
-
-                    <div className="searchbox">
-                        <div className="row">
-                            <div className="col s11">
-                                <input className="search-input" type="text" placeholder="Buscar..." value={this.state.param} onChange={this.handleUpdate} />
-                        </div>
-                            <div className="col s1">
-                                <button className="btn-floating btn-large waves-effect waves-light blue"><span className='glyphicon glyphicon-search'></span></button>
-                        </div >
-                        </div>
-                    </div>
+                        <strong>Library GBH</strong> 
+                    </Alert>                   
            
                 {contents}              
 
             </div>;
     }
 
-    private static renderListProducts(products: IProductList[]) {
+    private static renderListBooks(books: IBookList[]) {
 
 
         return <div>
         {
-            products.map(product =>
+                books.map(book =>
 
-                    <Product key={product.ProductCode} name={product.Name}
-                        description={product.Description} quantity={product.Quantity} price={product.Price}
-                        img={product.Img} productId={product.ProductCode} shouldRedirect={false} 
-                />
+                    <Book key={book.BookId} Name={book.Name}
+                        Description={book.Description}
+                        Author={book.Author}
+                        CoverPageImg={book.CoverPageImg} BookId={book.BookId}
+                        TotalPages={book.TotalPages}
+                        BooksTypesName={book.BooksTypesName}
+                        shouldRedirect={false} />
                 ).reverse()
 
         }
         </div> 
             
-    }
-
-    
+    }    
    
 }
 
-interface IProductList {
-    Price: number;
-    ProductCode: string;
+interface IBookList {
+    BookId: number;
     Name: string;
     Description: string;
-    Img: FormData;
-    Quantity: number;
+    CoverPageImg: FormData;
+    TotalPages: number;
+    Author: string;
+    BooksTypesName: string;
 }

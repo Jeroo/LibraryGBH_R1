@@ -117,7 +117,8 @@ namespace LibraryGBH.Data
             if (extConfiguration != null)
                 extConfiguration.Connection.StateChange += Connection_StateChange;
 
-            optionsBuilder.UseSqlServer("Server=LAPTOP-1OVSP5MD\\SQLEXPRESS;Database=LibraryGBH_R1;Persist Security Info=False;User ID=adminUser;Password=DB_PASS01@;Trusted_Connection=False;");
+            //Connection string for migrations
+            //optionsBuilder.UseSqlServer("Server=LAPTOP-1OVSP5MD\\SQLEXPRESS;Database=LibraryGBH_R1;Persist Security Info=False;User ID=adminUser;Password=DB_PASS01@;Trusted_Connection=False;");
         }
 
         #endregion
